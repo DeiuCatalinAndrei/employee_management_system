@@ -1,22 +1,6 @@
-# Employee Management System with SQL DataBase
-
-## This is a Employee Management System with SQL DataBase. We have the possibility to:
-
-- Hire an employee
-- Fire an employee
-- Edit an employee salary
-- Displays the employee database
-- Exit
-
-
-## Imports 
-```python
 import sqlite3
 import sys
-``` 
 
-## DataBase Class 
-```python
 class Database():
     def __init__(self):
         self.connection = sqlite3.connect('database.db')
@@ -53,10 +37,7 @@ class Database():
             print()
         else:
             print('The DataBase is empty')
-```
-
-## Aplication Class 
-```python
+            
 class Aplication():
     def __init__(self):
         self.status = True
@@ -66,9 +47,8 @@ class Aplication():
 
     def Turn_off(self):
         self.status = False
-```
-## Menu Show function 
-```python
+
+
 def menu_show():
     print('\nWite the number corresponding to the desired option: ')
     print('0 : Hire an employee')
@@ -76,9 +56,7 @@ def menu_show():
     print('2 : Edit an employee salary')
     print('3 : Displays the employee database')
     print('4 : Exit')
-```
-## Main Function 
-```python
+
 def main():
     aplication = Aplication()
     db = Database()
@@ -116,9 +94,5 @@ def main():
             menu_action(option)
         except:
             print("There was a problem. Try again.")
-```
-## Main 
-```python
-main()
-```
 
+main()
